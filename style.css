@@ -136,8 +136,8 @@ button {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease 0s;
-  cursor: pointer;
-  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* cursor: pointer; */
+  /* webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
 }
 
 .btn-set-time span {
@@ -161,14 +161,14 @@ button {
 
 .letter {
   display: block;
-  font-size: 160px;
+  font-size: 150px;
   color: rgb(26, 22, 22);
   font-family: 'Comfortaa';
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  margin: 45px 0;
   user-select: none;
   transform: scale(0.8);
 }
