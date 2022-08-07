@@ -78,6 +78,9 @@ function handleTimer() {
   if (timer == 0) {
     playSound(soundEnd);
     stopTimer();
+    if (window.navigator && window.navigator.vibrate) {
+      navigator.vibrate(300);
+    }
   }
 }
 
@@ -95,10 +98,6 @@ function stopTimer() {
   //   timerDot.style.transform = 'rotate(0deg)'; 0 = Dot рух. разом з промінем
   timerDot.style.transform = 'rotate(-360deg)';
   letter.classList.remove('active');
-
-  if (window.navigator && window.navigator.vibrate) {
-    navigator.vibrate(300);
-  }
 }
 
 setStartTimerValue();

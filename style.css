@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   background-color: rgb(31, 31, 34);
   font-family: 'Exo 2';
-  /* padding: 30px 5px; */
+  padding: 15px 5px;
   overflow-x: hidden;
 }
 
@@ -161,7 +161,7 @@ button {
 
 .letter {
   display: block;
-  font-size: 150px;
+  font-size: 160px;
   color: rgb(26, 22, 22);
   font-family: 'Comfortaa';
   font-weight: 700;
@@ -169,7 +169,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 45px 0;
+  margin: 30px 0;
   user-select: none;
   transform: scale(0.8);
 }
