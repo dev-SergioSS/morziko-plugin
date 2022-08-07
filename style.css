@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   background-color: rgb(31, 31, 34);
   font-family: 'Exo 2';
-  padding: 15px 5px;
+  padding: 25px 5px;
   overflow-x: hidden;
 }
 
@@ -165,7 +165,6 @@ button {
   color: rgb(26, 22, 22);
   font-family: 'Comfortaa';
   font-weight: 700;
-  flex: 1 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
