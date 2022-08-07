@@ -1,0 +1,233 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Exo+2:regular,500,600,700);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(31, 31, 34);
+  font-family: 'Exo 2';
+  padding: 30px 5px;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: 'Exo 2';
+  outline: none;
+}
+
+/*^ TIME WRAPPER */
+
+.time-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.timer {
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 230px;
+  margin: 0 20px;
+}
+.timer svg {
+  position: absolute;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  top: 4px;
+  left: 4px;
+  z-index: -1;
+  transform: rotate(270deg);
+  overflow: visible;
+}
+.timer svg circle {
+  fill: transparent;
+  stroke: #191919;
+  stroke-width: 2;
+}
+
+.timer svg circle:nth-child(2) {
+  stroke: #fee800;
+  stroke-dasharray: 698;
+  stroke-dashoffset: 698;
+  transition: all 0.2s ease 0s;
+}
+
+/*^ DOT */
+
+.dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease 0s;
+}
+
+.dot::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #191919;
+  border-radius: 50%;
+  z-index: 10;
+  position: relative;
+  top: -1px;
+  box-shadow: 0 0 15px #191919;
+}
+
+.dot.active::after {
+  background: #fee800;
+  box-shadow: 0 0 15px #fee800;
+}
+
+/* ^ TIMER TEXT */
+
+.timer-text {
+  text-align: center;
+  padding: 10px 0 10px 8px;
+  letter-spacing: 8px;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.timer-digits {
+  margin-bottom: 40px;
+}
+
+.timer-text span {
+  font-size: 18px;
+  opacity: 0.2;
+  letter-spacing: 6px;
+  display: block;
+  position: relative;
+  top: -25px;
+}
+
+/*^ TIMER BUTTONS  */
+
+.btn-set-time {
+  width: 40px;
+  height: 50px;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #1c1c1f, #212124);
+  box-shadow: 5px 5px 10px #18181a, -5px -5px 10px #26262a;
+
+  font-size: 30px;
+  text-align: center;
+  line-height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.btn-set-time span {
+  display: block;
+  position: relative;
+  top: -2px;
+  color: rgb(84, 62, 62);
+  user-select: none;
+  transition: all 0.4s ease 0s;
+}
+
+.btn-set-time.active span {
+  color: rgb(45, 45, 215);
+}
+
+.btn-set-time.active:active {
+  transform: translate(-1px, -1px) scale(0.9);
+}
+
+/* ^ LETTER */
+
+.letter {
+  display: block;
+  font-size: 150px;
+  color: rgb(26, 22, 22);
+  font-family: 'Comfortaa';
+  font-weight: 700;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 45px 0;
+  user-select: none;
+  transform: scale(0.8);
+}
+
+@keyframes letter {
+  0% {
+    transform: scale(0.8);
+  }
+  64% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.letter.active {
+  color: rgb(67, 62, 140);
+  transform: scale(1);
+  animation: letter 0.2s ease 0s;
+}
+
+/*^ NAV BUTTONS  */
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-buttons button {
+  background: #272727;
+  border: none;
+  margin-bottom: 20px;
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #1c1c1f, #212124);
+  box-shadow: 3px 3px 10px #18181a, -3px -3px 10px #26262a;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease 0s;
+  user-select: none;
+}
+
+.btn-stop {
+  color: rgb(203, 56, 56);
+  text-shadow: 0 0 16px red;
+}
+.btn-start {
+  color: rgb(53, 198, 37);
+  text-shadow: 0 0 16px green;
+}
+
+.nav-buttons button:active {
+  transform: translate(-1px, -1px) scale(0.9);
+}
