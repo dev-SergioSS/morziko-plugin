@@ -19,21 +19,23 @@ let timer;
 
 btnsSetTime.forEach((btn) =>
   btn.addEventListener('click', (e) => {
-    let newTime;
+    if (e.currentTarget.classList.contains('active')) {
+      let newTime;
 
-    if (e.currentTarget.classList.contains('inc') && e.currentTarget.classList.contains('active')) {
-      newTime = startTimerValue + 10;
-    }
-    if (e.currentTarget.classList.contains('dec') && e.currentTarget.classList.contains('active')) {
-      if (startTimerValue > 30) {
-        newTime = startTimerValue - 10;
-      } else {
-        newTime = 30;
+      if (e.currentTarget.classList.contains('inc')) {
+        newTime = startTimerValue + 10;
       }
-    }
+      if (e.currentTarget.classList.contains('dec')) {
+        if (startTimerValue > 30) {
+          newTime = startTimerValue - 10;
+        } else {
+          newTime = 30;
+        }
+      }
 
-    localStorage.setItem('timerValue', newTime);
-    setStartTimerValue();
+      localStorage.setItem('timerValue', newTime);
+      setStartTimerValue();
+    }
   }),
 );
 
