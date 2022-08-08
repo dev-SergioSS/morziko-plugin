@@ -46,7 +46,8 @@ btnStart.addEventListener('click', () => {
   // rundom letter
   let index = Math.floor(Math.random() * alphabet.length);
   letter.innerHTML = alphabet[index];
-  letter.classList.add('active');
+  letter.classList.add('colored');
+  letterAnimation();
 
   // set start position circle & Dot
   timerCircle.style.strokeDashoffset = circleLenth * 2;
@@ -68,6 +69,11 @@ btnStop.addEventListener('click', () => {
 function setStartTimerValue() {
   startTimerValue = +localStorage.getItem('timerValue') || 120;
   timerDigits.innerHTML = startTimerValue;
+}
+
+function letterAnimation() {
+  letter.classList.add('animated');
+  setTimeout(() => letter.classList.remove('animated'), 300);
 }
 
 function handleTimer() {
@@ -99,7 +105,7 @@ function stopTimer() {
   timerDot.classList.remove('active');
   //   timerDot.style.transform = 'rotate(0deg)'; 0 = Dot рух. разом з промінем
   timerDot.style.transform = 'rotate(-360deg)';
-  letter.classList.remove('active');
+  letter.classList.remove('colored');
 }
 
 setStartTimerValue();

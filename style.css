@@ -188,9 +188,10 @@ button {
   }
 }
 
-.letter.active {
+.letter.colored {
   color: rgb(67, 62, 140);
-  transform: scale(1);
+}
+.letter.animated {
   animation: letter 0.2s ease 0s;
 }
 
