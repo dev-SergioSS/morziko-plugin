@@ -1,0 +1,36 @@
+{
+    "name": "Morziko Plugin Web App",
+    "short_name": "Morziko",
+    "description": "This app is a plugin for the game morziko. The app contains a timer and a random letter",
+    "icons": [
+        {
+            "src": "icons/icon-32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+		{
+            "src": "icons/icon-64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+		{
+            "src": "icons/icon-128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+		{
+            "src": "icons/icon-256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "theme_color": "#1f1f22",
+    "background_color": "#1f1f22"
+}
